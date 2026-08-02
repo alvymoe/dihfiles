@@ -1,10 +1,14 @@
+package.path = package.path .. ";../?.lua;../?/init.lua"
+
 require("style")
 require("behavior")
 require("autostart")
 
+local username = os.getenv("USER")
+
 -- do keybinds per user
-if pcall(require, "binds." .. os.getenv("USER")) then
-    require("binds." .. os.getenv("USER"))
+if pcall(require, "binds." .. username) then
+    require("binds." .. username)
 else
     require("binds.default")
 end
@@ -20,6 +24,8 @@ end
 
 local hostname = get_hostname()
 
-if pcall(require, "machines." .. get_hostname()) == false then
+if pcall(require, "machines." .. hostname) == false then
+    require("machines." .. hostname)
+else
 	-- ill make default monitors eventually
 end

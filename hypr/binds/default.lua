@@ -1,4 +1,3 @@
-package.path = package.path .. ";../?.lua;../?/init.lua"
 local hs = require("hyprsplit")
 
 local terminal = "kitty"
