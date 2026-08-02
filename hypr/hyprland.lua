@@ -24,8 +24,8 @@ end
 
 local hostname = get_hostname()
 
-if pcall(require, "machines." .. hostname) == false then
+if pcall(require, "machines." .. hostname) then
     require("machines." .. hostname)
 else
-	-- ill make default monitors eventually
+	-- default settings are evil
 end

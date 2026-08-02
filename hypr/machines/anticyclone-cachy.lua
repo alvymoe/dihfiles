@@ -1,3 +1,4 @@
+package.path = package.path .. ";../?.lua;../?/init.lua"
 local hs = require("hyprsplit")
 
 -- 5070 ti setup
