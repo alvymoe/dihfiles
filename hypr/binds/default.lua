@@ -72,7 +72,12 @@ hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker | wl-copy"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("helium-browser"))
 
-hl.bind(mainMod .. " + K", hl.dsp.exec_cmd("awww img $(find ~/Pictures/Wallpapers -type f | vicinae dmenu -p 'Pick a wallpaper...')"))
+-- switch wallpaper for monitor
+hl.bind(mainMod .. " + K", function()
+    hl.dispatch(hl.dsp.exec_cmd("awww img --outputs ".. hl.get_monitor_at_cursor().name .. " $(find ~/Pictures/Wallpapers -type f | vicinae dmenu -p 'Pick a wallpaper...')"))
+end)
+-- switch wallpaper for all monitors
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.exec_cmd("awww img $(find ~/Pictures/Wallpapers -type f | vicinae dmenu -p 'Pick a wallpaper...')"))
 
 -- https://wiki.hypr.land/Configuring/Variables/#input
 
@@ -89,7 +94,7 @@ hl.config({
         kb_options = "",
         kb_rules = "",
         follow_mouse = 1,
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+        sensitivity = -0.5, -- -1.0 - 1.0, 0 means no modification.
         touchpad = {
             natural_scroll = false,
         },
