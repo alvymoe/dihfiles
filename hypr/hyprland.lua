@@ -29,3 +29,5 @@ if pcall(require, "machines." .. hostname) then
 else
 	-- default settings are evil
 end
+
+-- gay
