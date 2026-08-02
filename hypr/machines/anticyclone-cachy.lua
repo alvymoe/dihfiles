@@ -1,5 +1,7 @@
--- 5070 ti setup
+package.path = package.path .. ";../?.lua;../?/init.lua"
 local hs = require("hyprsplit")
+
+-- 5070 ti setup
 hs.monitor_priority( { "DP-6" , "DP-5" , "HDMI-A-5", "DP-3" } )
 
 -- main monitor
