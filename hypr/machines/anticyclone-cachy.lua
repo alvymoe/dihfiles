@@ -1,6 +1,6 @@
 -- 5070 ti setup
 local hs = require("hyprsplit")
-hs.monitor_priority( { "DP-6" , "DP-5" , "DP-3" } )
+hs.monitor_priority( { "DP-6" , "DP-5" , "HDMI-A-5", "DP-3" } )
 
 -- main monitor
 hl.monitor({

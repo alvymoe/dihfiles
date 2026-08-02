@@ -3,8 +3,10 @@ require("behavior")
 require("autostart")
 
 -- do keybinds per user
-if pcall(require, "binds." .. os.getenv("USER")) == false then
-	require("binds.default")
+if pcall(require, "binds." .. os.getenv("USER")) then
+    require("binds." .. os.getenv("USER"))
+else
+    require("binds.default")
 end
 
 -- do monitors and stuff per hostname
