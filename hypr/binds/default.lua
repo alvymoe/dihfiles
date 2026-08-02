@@ -1,5 +1,6 @@
 package.path = package.path .. ";../?.lua;../?/init.lua"
 local hs = require("hyprsplit")
+local actions = require("actions")
 
 local terminal = "kitty"
 local fileManager = "thunar"
@@ -73,11 +74,9 @@ hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("helium-browser"))
 
 -- switch wallpaper for monitor
-hl.bind(mainMod .. " + K", function()
-    hl.dispatch(hl.dsp.exec_cmd("awww img --outputs ".. hl.get_monitor_at_cursor().name .. " $(find ~/Pictures/Wallpapers -type f | vicinae dmenu -p 'Pick a wallpaper...')"))
-end)
+hl.bind(mainMod .. " + K", actions.pick_wallpaper_monitor)
 -- switch wallpaper for all monitors
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.exec_cmd("awww img $(find ~/Pictures/Wallpapers -type f | vicinae dmenu -p 'Pick a wallpaper...')"))
+hl.bind(mainMod .. " + SHIFT + K", actions.pick_wallpaper)
 
 -- https://wiki.hypr.land/Configuring/Variables/#input
 
