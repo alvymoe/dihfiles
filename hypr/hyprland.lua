@@ -1,6 +1,12 @@
 package.path = package.path .. ";../?.lua;../?/init.lua"
 
-require("style")
+local username = os.getenv("USER")
+
+if pcall(require, "style." .. username) then
+    require("style." .. username)
+else
+	require("style.default")
+end
 require("behavior")
 require("autostart")
 
