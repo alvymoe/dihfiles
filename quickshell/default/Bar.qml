@@ -190,7 +190,7 @@ Scope {
 
                             Text {
                                 text: index + 1
-                                color: parent.isActive ? root.colCyan : (parent.hasWindows ? root.colCyan : root.colMuted)
+                                color: parent.isActive ? root.colPrimary : root.colFg
                                 font.pixelSize: root.fontSize
                                 font.family: root.fontFamily
                                 font.bold: true
@@ -200,7 +200,7 @@ Scope {
                             Rectangle {
                                 width: 20
                                 height: 2
-                                color: parent.isActive ? root.colPurple : root.colBg
+                                color: parent.isActive ? root.colPrimary : root.colBg
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 anchors.bottom: parent.bottom
                             }
@@ -246,12 +246,12 @@ Scope {
 
                     Text {
                         text: activeWindow
-                        color: root.colPurple
+                        color: root.colPrimary
                         font.pixelSize: root.fontSize
                         font.family: root.fontFamily
                         font.bold: true
                         Layout.fillWidth: true
-                        Layout.leftMargin: 8
+                        Layout.leftMargin: 4
                         elide: Text.ElideRight
                         maximumLineCount: 1
                     }
@@ -334,7 +334,7 @@ Scope {
 
                     Text {
                         text: "Mem: " + memUsage + "%"
-                        color: root.colCyan
+                        color: root.colPrimary
                         font.pixelSize: root.fontSize
                         font.family: root.fontFamily
                         font.bold: true
@@ -352,7 +352,7 @@ Scope {
 
                     Text {
                         text: "CPU: " + cpuUsage + "%"
-                        color: root.colYellow
+                        color: cpuUsage > 90 ? root.colWarn : root.colPrimary
                         font.pixelSize: root.fontSize
                         font.family: root.fontFamily
                         font.bold: true
@@ -375,7 +375,7 @@ Scope {
 
                         id: batText
                         text: "Bat: " + (bat.ready ? Math.round(bat.percentage*100).toString() + "%" : "...")
-                        color: root.colCyan
+                        color: root.colPrimary
                         font.pixelSize: root.fontSize
                         font.family: root.fontFamily
                         font.bold: true
@@ -394,7 +394,7 @@ Scope {
                     Text {
                         id: clockText
                         text: Qt.formatDateTime(new Date(), "ddd, MMM dd - HH:mm:ss")
-                        color: root.colCyan
+                        color: root.colPrimary
                         font.pixelSize: root.fontSize
                         font.family: root.fontFamily
                         font.bold: true
@@ -414,7 +414,7 @@ Scope {
                 Rectangle {
                     width: parent.width
                     height: 1
-                    color: root.colPurple
+                    color: root.colPrimary
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.bottom: parent.bottom
                 }
