@@ -12,6 +12,8 @@ import Quickshell.Services.UPower
 Scope {
 	id: bar
 
+	property bool visible: true
+
 	// System info properties
     property int cpuUsage: 0
     property int memUsage: 0
@@ -142,13 +144,15 @@ Scope {
             property var modelData
             screen: modelData
 
+            visible: bar.visible
+
             anchors {
                 top: true
                 left: true
                 right: true
             }
 
-            implicitHeight: hover.hovered ? 20 : 0
+            implicitHeight: 20
             color: root.colBg
 
             margins {
@@ -160,23 +164,9 @@ Scope {
 
             property var currentMonitor: Hyprland.monitorFor(screen)
 
-            // For hovering
-            Rectangle {
-                id: triggerArea
-                anchors.fill: parent
-                color: "transparent"
-
-                // Modern Qt 6 hover handler
-                HoverHandler {
-                    id: hover
-                }
-            }
-
             Rectangle {
                 anchors.fill: parent
                 color: root.colBg
-
-                visible: hover.hovered
 
                 RowLayout {
                     anchors.fill: parent

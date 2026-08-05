@@ -1,3 +1,6 @@
+package.path = package.path .. ";../?.lua;../?/init.lua"
+local hs = require("hyprsplit")
+
 local res = {}
 
 res.pick_wallpaper = function()

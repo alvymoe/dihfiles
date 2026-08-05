@@ -2,10 +2,37 @@
 
 import Quickshell
 import QtQuick
+import Quickshell.Io
+import Quickshell.Hyprland
 import "."
 
 ShellRoot {
     id: root
+
+    JsonAdapter {
+        id: configAdapter
+        property bool showBar: true
+    }
+
+    FileView {
+        id: configFile
+        path: Quickshell.env("HOME") + "/.config/quickshell/default/configs/" + Quickshell.env("USER") + ".json"
+
+        adapter: configAdapter
+
+        watchChanges: true
+        onFileChanged: reload()
+        onAdapterUpdated: writeAdapter()
+    }
+
+    IpcHandler {
+        target: "dihshell"
+
+        // This function will be exposed via IPC
+        function toggleBar() {
+            configAdapter.showBar = !configAdapter.showBar
+        }
+    }
 
     // Theme colors
     property color colBg: "#55232A2E"
@@ -24,7 +51,9 @@ ShellRoot {
     property int fontSize: 12
 
     VolumeOSD {}
-    Bar {}
+    Bar {
+        visible: configAdapter.showBar
+    }
 
 //    Connections {
 //        target: NotificationServer{

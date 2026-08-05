@@ -65,3 +65,19 @@ hl.config({
     -- Example windowrules that are useful
 })
 
+hl.window_rule({
+  name = "kando",
+  match = {
+      class = "menu.kando.Kando",
+      title = "Kando Menu"
+  },
+  no_blur = true,
+  opaque = true,
+  move = {0, 0},
+  rounding = 0,
+  size = { "100%", "100%" },
+  border_size = 0,
+  no_anim = true,
+  float = true,
+  pin = true
+})

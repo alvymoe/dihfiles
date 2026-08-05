@@ -11,6 +11,7 @@ local mainMod = "SUPER"
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
 
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("vicinae vicinae://launch/clipboard/history"))
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("vicinae vicinae://launch/core/search-emojis"))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
@@ -77,6 +78,8 @@ hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + K", actions.pick_wallpaper_monitor)
 -- switch wallpaper for all monitors
 hl.bind(mainMod .. " + SHIFT + K", actions.pick_wallpaper)
+-- toggle bar
+hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("quickshell ipc call dihshell toggleBar"))
 
 -- https://wiki.hypr.land/Configuring/Variables/#input
 
@@ -100,4 +103,3 @@ hl.config({
     },
     -- See https://wiki.hypr.land/Configuring/Gestures
 })
-
