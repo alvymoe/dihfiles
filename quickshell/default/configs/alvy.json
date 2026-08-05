@@ -1,3 +1,15 @@
 {
+    "colBg": "#55232A2E",
+    "colBlue": "#a7c080",
+    "colCyan": "#a7c080",
+    "colFg": "#ffffff",
+    "colGreen": "#a7c080",
+    "colMuted": "#a7c080",
+    "colPrimary": "#a7c080",
+    "colPurple": "#a7c080",
+    "colRed": "#a7c080",
+    "colYellow": "#a7c080",
+    "fontFamily": "JetBrainsMono Nerd Font",
+    "fontSize": 12,
     "showBar": true
 }
