@@ -70,6 +70,7 @@ hl.config({
     -- Example windowrules that are useful
 })
 
+-- idk why this doesn't work on hyprland anymore
 hl.window_rule({
   name = "kando",
   match = {
@@ -85,4 +86,14 @@ hl.window_rule({
   no_anim = true,
   float = true,
   pin = true
+})
+
+hl.window_rule({
+    name = "junction-chooser",
+    match = {
+        class = "re.sonny.Junction"
+    },
+    float = true,
+    size = { 500, 400 },
+    move = { "(cursor_x-(window_w*0.5))", "(cursor_y-(window_h*0.5))" }
 })

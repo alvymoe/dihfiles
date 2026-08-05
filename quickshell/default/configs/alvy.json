@@ -1,6 +1,6 @@
 {
     "fontFamily": "JetBrainsMono Nerd Font",
-    "palette": "miku-resonance",
     "fontSize": 12,
+    "palette": "default",
     "showBar": true
 }

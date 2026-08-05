@@ -63,6 +63,9 @@ ShellRoot {
         function toggleBar() {
             cfg.showBar = !cfg.showBar
         }
+        function changePalette(p: string) {
+            cfg.palette = p
+        }
     }
 
     // Theme colors
