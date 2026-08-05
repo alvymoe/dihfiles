@@ -76,9 +76,8 @@ hl.device({
 })
 
 hl.config({
-    -- nvidia is a bitch
     cursor = {
-        no_hardware_cursors = false,
+        default_monitor = "DP-6",
+        no_hardware_cursors = false, -- nvidia is a bitch
     },
 })
-
