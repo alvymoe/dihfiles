@@ -3,7 +3,7 @@
 -- polkit
 
 -- fix kde apps on hyprland
--- zhttps://www.lorenzobettini.it/2024/05/fixing-the-empty-open-with-in-dolphin-in-hyprland/
+-- https://www.lorenzobettini.it/2024/05/fixing-the-empty-open-with-in-dolphin-in-hyprland/
 hl.env("XDG_MENU_PREFIX", "arch-")
 
 -- wayland electron
@@ -19,5 +19,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("swaync")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("halo")
-end)
 
+    -- also for kde
+    hl.exec_cmd("XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental")
+end)

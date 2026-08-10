@@ -3,7 +3,7 @@ local hs = require("hyprsplit")
 local actions = require("actions")
 
 local terminal = "kitty"
-local fileManager = "thunar"
+local fileManager = "dolphin"
 local menu = "vicinae toggle"
 
 local mainMod = "SUPER"
@@ -71,7 +71,7 @@ hl.bind("print", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker | wl-copy"))
 
 -- zen bih
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("zen-browser"))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("vivaldi"))
 hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("helium-browser"))
 
 -- switch wallpaper for monitor
@@ -80,6 +80,15 @@ hl.bind(mainMod .. " + K", actions.pick_wallpaper_monitor)
 hl.bind(mainMod .. " + SHIFT + K", actions.pick_wallpaper)
 -- toggle bar
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("quickshell ipc call dihshell toggleBar"))
+
+
+-- the keychron k0 max is a real device that exists
+hl.bind("F24", function ()
+    hl.notification.create({
+        text = "pressed",
+        timeout = 3000,          -- Time in milliseconds (e.g., 3000ms = 3s)
+    })
+end)
 
 -- https://wiki.hypr.land/Configuring/Variables/#input
 
