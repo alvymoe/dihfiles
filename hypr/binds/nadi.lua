@@ -22,7 +22,8 @@ hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/de
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind( "ALT + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pin())
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
@@ -104,12 +105,23 @@ hl.config({
         kb_options = "",
         kb_rules = "",
         follow_mouse = 1,
-        sensitivity = -1, -- -1.0 - 1.0, 0 means no modification.
-        accel_profile = "custom 6.3 0 1", --the first number after custom divides your sensitivity :D
         touchpad = {
-            natural_scroll = false,
-
+            natural_scroll = true,
+            scroll_factor = 0.2,
+            clickfinger_behavior =  true,
         },
     },
     -- See https://wiki.hypr.land/Configuring/Gestures
+})
+
+hl.device({
+    name = "logitech--pro-x-1",
+    sensitivity = -1, -- -1.0 - 1.0, 0 means no modification.
+    accel_profile = "custom 6.3 0 1", --the first number after custom divides your sensitivity :D
+})
+hl.device({
+    name = "0274-touchpad",
+    disable_while_typing = false,
+    sensitivity = -1,
+    accel_profile = "adaptive"
 })
