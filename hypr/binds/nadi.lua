@@ -50,13 +50,6 @@ hl.bind(mainMod .. " + l", hl.dsp.group.lock_active({ action = "toggle" }))
 hl.bind(mainMod .. " + tab", hl.dsp.group.next())
 hl.bind(mainMod .. " + SHIFT + tab", hl.dsp.group.prev())
 
-<<<<<<< HEAD
-=======
--- Example special workspace (scratchpad)
---hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
---hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
-
->>>>>>> 7c6ca944932f8ff939f73b979315fc87f14c01a9
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
@@ -111,11 +104,6 @@ hl.config({
         kb_options = "",
         kb_rules = "",
         follow_mouse = 1,
-<<<<<<< HEAD
-=======
-        sensitivity = -1, -- -1.0 - 1.0, 0 means no modification.
-        accel_profile = "custom 8 0 1", --the first number after custom divides your sensitivity :D
->>>>>>> 7c6ca944932f8ff939f73b979315fc87f14c01a9
         touchpad = {
             natural_scroll = true,
             scroll_factor = 0.2,
