@@ -48,10 +48,6 @@ hl.bind(mainMod .. " + l", hl.dsp.group.lock_active({ action = "toggle" }))
 hl.bind(mainMod .. " + tab", hl.dsp.group.next())
 hl.bind(mainMod .. " + SHIFT + tab", hl.dsp.group.prev())
 
--- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
-
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())

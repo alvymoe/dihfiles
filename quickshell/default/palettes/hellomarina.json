@@ -1,13 +1,13 @@
 {
     "colBg": "#ffffff",
-    "colFg": "#16b88d",
+    "colFg": "#238fb0",
     "colMuted": "#5b666f",
 
-    "colPrimary": "#16b88d",
-    "colAccent": "#078c69",
+    "colPrimary": "#2d79a8",
+    "colAccent": "#2d79a8",
     "colWarn": "#ff0000",
 
-    "colBlue": "#00cabc",
+    "colBlue": "#2d79a8",
     "colCyan": "#000000",
     "colGreen": "#91f697",
     "colPurple": "#000000",
