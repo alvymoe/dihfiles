@@ -8,9 +8,11 @@ local menu = "vicinae toggle"
 local mainMod = "SUPER"
 
 hl.notification.create({
-    text = "that shit updated",
+    text = "that shit loaded yo",
     timeout = 3000,          -- Time in milliseconds (e.g., 3000ms = 3s)
 })
+
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("wayscriber --daemon-toggle"))
 
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
 
@@ -48,6 +50,13 @@ hl.bind(mainMod .. " + l", hl.dsp.group.lock_active({ action = "toggle" }))
 hl.bind(mainMod .. " + tab", hl.dsp.group.next())
 hl.bind(mainMod .. " + SHIFT + tab", hl.dsp.group.prev())
 
+<<<<<<< HEAD
+=======
+-- Example special workspace (scratchpad)
+--hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
+--hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+
+>>>>>>> 7c6ca944932f8ff939f73b979315fc87f14c01a9
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
@@ -67,7 +76,7 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- screenshot
-hl.bind("print", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker | wl-copy"))
 
 -- zen bih
@@ -82,7 +91,8 @@ end)
 -- all wallpapers
 hl.bind(mainMod .. "+ SHIFT + K",
     hl.dsp.exec_cmd("awww img $(find ~/Pictures/Wallpapers -type f | vicinae dmenu -p 'Pick a wallpaper...')"))
-
+-- toggle bar
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("quickshell ipc call dihshell toggleBar"))
 
 
 -- https://wiki.hypr.land/Configuring/Variables/#input
@@ -101,6 +111,11 @@ hl.config({
         kb_options = "",
         kb_rules = "",
         follow_mouse = 1,
+<<<<<<< HEAD
+=======
+        sensitivity = -1, -- -1.0 - 1.0, 0 means no modification.
+        accel_profile = "custom 8 0 1", --the first number after custom divides your sensitivity :D
+>>>>>>> 7c6ca944932f8ff939f73b979315fc87f14c01a9
         touchpad = {
             natural_scroll = true,
             scroll_factor = 0.2,

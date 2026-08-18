@@ -1,0 +1,16 @@
+{
+    "colBg": "#b2b2b2",
+    "colFg": "#6a6a6a",
+    "colMuted": "#000000",
+
+    "colPrimary": "#000000",
+    "colAccent": "#000000",
+    "colWarn": "#ff0000",
+
+    "colBlue": "#00cabc",
+    "colCyan": "#000000",
+    "colGreen": "#91f697",
+    "colPurple": "#000000",
+    "colRed":"#000000",
+    "colYellow": "#000000"
+}
