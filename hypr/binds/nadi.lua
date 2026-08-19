@@ -104,6 +104,8 @@ hl.config({
         kb_options = "",
         kb_rules = "",
         follow_mouse = 1,
+        sensitivity = -1, -- -1.0 - 1.0, 0 means no modification.
+        accel_profile = "custom 6.3 0 1", --the first number after custom divides your sensitivity :D
         touchpad = {
             natural_scroll = true,
             scroll_factor = 0.2,
@@ -121,6 +123,5 @@ hl.device({
 hl.device({
     name = "0274-touchpad",
     disable_while_typing = false,
-    sensitivity = -1,
     accel_profile = "adaptive"
 })
