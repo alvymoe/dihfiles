@@ -1,11 +1,9 @@
 {
     "fontFamily": "JetBrainsMono Nerd Font",
     "fontSize": 12,
-<<<<<<< HEAD
     "palette": "hellomarina",
     "showBar": true
-=======
     "palette": "osage",
     "showBar": false
->>>>>>> 7c6ca944932f8ff939f73b979315fc87f14c01a9
+
 }
