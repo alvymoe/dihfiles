@@ -7,6 +7,12 @@ local menu = "vicinae toggle"
 
 local mainMod = "SUPER"
 
+hl.on("hyprland.start", function ()
+    hl.exec_cmd(terminal)
+
+    hl.exec_cmd("rclone mount Nextcloud: /home/nadi/Nextcloud/ --vfs-cache-mode full")
+end)
+
 hl.notification.create({
     text = "that shit loaded yo",
     timeout = 3000,          -- Time in milliseconds (e.g., 3000ms = 3s)
