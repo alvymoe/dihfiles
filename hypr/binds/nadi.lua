@@ -111,6 +111,7 @@ hl.config({
         touchpad = {
             natural_scroll = true,
             scroll_factor = 0.2,
+            disable_while_typing = false,
             clickfinger_behavior =  true,
         },
     },
@@ -124,7 +125,6 @@ hl.device({
 
 hl.device({
     name = "0274-touchpad",
-    disable_while_typing = false,
     sensitivity = 1,
     accel_profile = "adaptive",
 })
