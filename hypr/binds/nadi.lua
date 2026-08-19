@@ -113,14 +113,15 @@ hl.config({
     },
     -- See https://wiki.hypr.land/Configuring/Gestures
 })
-
 hl.device({
-    name = "logitech--pro-x-1",
+    name = "logitech-pro-x-1",
     sensitivity = -1, -- -1.0 - 1.0, 0 means no modification.
     accel_profile = "custom 6.3 0 1", --the first number after custom divides your sensitivity :D
 })
+
 hl.device({
     name = "0274-touchpad",
     disable_while_typing = false,
+    sensitivity = 1,
     accel_profile = "adaptive",
 })
