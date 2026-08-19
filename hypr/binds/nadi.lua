@@ -8,8 +8,6 @@ local menu = "vicinae toggle"
 local mainMod = "SUPER"
 
 hl.on("hyprland.start", function ()
-    hl.exec_cmd(terminal)
-
     hl.exec_cmd("rclone mount Nextcloud: /home/nadi/Nextcloud/ --vfs-cache-mode full")
 end)
 
