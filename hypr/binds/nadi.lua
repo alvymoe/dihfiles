@@ -105,7 +105,6 @@ hl.config({
         kb_rules = "",
         follow_mouse = 1,
         sensitivity = -1, -- -1.0 - 1.0, 0 means no modification.
-        accel_profile = "custom 6.3 0 1", --the first number after custom divides your sensitivity :D
         touchpad = {
             natural_scroll = true,
             scroll_factor = 0.2,
@@ -116,7 +115,7 @@ hl.config({
 })
 
 hl.device({
-    name = "logitech--pro-x-1",
+    name = "logitech-pro-x-1",
     sensitivity = -1, -- -1.0 - 1.0, 0 means no modification.
     accel_profile = "custom 6.3 0 1", --the first number after custom divides your sensitivity :D
 })
